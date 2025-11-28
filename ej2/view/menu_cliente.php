@@ -7,6 +7,7 @@
 </head>
 <body>
             <a href="../controller/list_clientes_ctl.php">Ver todos los clientes</a><br>
-			<a href="../controller/create_cliente_ctl.php">Alta cliente</a>
+			<a href="../controller/create_cliente_ctl.php">Alta cliente</a><br>
+            <a href="../index.php">Volver a Inicio</a>
 </body>
 </html>

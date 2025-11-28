@@ -4,23 +4,27 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	</head>
 	<body>
+	<?php 
+	$clientes=new clienteDAO();
+	$arrayClientes=[];
+    $arrayClientes=$clientes->verClientes();
+?>
 		<form action="../controller/create_cuenta_ctl.php" method='post'>
-			 <table border='1' cellpadding='2' cellspacing='2'>
-				 <tr>
-					 <td>Codigo</td>
-					 <td><input type='text' name='codigo' size='50'/></td>
-				 </tr>
-				 <tr>
-					 <td>Saldo</td>
-					 <td><input type='number' name='saldo' size='50'/></td>
-				 </tr>
-				 <tr>
-				 	<td>Cliente</td>
-				 	<td><?php echo '<select name="cliente">';foreach($arrayClientes as $cliente){
+			<table border='1' cellpadding='2' cellspacing='2'>
+				<tr>
+					<td>Codigo</td>
+					<td><input type='text' name='codigo' size='50'/></td>
+				</tr>
+				<tr>
+					<td>Saldo</td>
+					<td><input type='number' name='saldo' size='50'/></td>
+				</tr>
+				<tr>
+					<td>Cliente</td>
+					<td><?php echo '<select name="cliente">';foreach($arrayClientes as $cliente){
                 $ids = $cliente->getId();
                 $nombre = $cliente->getNombre() . ' ' . $cliente->getApellidos();
-                if($ids == $cuenta->getCliente()){
-
+                if($ids == $cliente->getId()){
                     echo '<option value="'.$ids.'" selected>'.$nombre.'</option>';
                 }else{
                     echo '<option value="'.$ids.'">'.$nombre.'</option>';
@@ -29,7 +33,7 @@
             }
             echo'</select>';
             ?></td>
-				 </tr>
+				</tr>
 			</table><br/>
 			<input type='submit' name='submit' value='Envia' />
 		</form>

@@ -47,9 +47,8 @@ class cliente{
 	}
 
 	public function getFecha(){
-		$fechas= $this->fechaN;
-		$fechar=date("d-m-Y",strtotime($fechas));
-		return $fechar;
+		return $this->fechaN;
+		
 	}
 	
 

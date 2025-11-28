@@ -11,7 +11,7 @@
 			<tr><td>Dni: </td><td><?php echo $cliente->getDni(); ?></td>			</tr>
 			<tr><td>Nombre: </td><td><?php echo $cliente->getNombre(); ?></td>			</tr>
 			<tr><td>Apellidos: </td><td> <?php echo $cliente->getApellidos(); ?></td>	</tr>
-            <tr><td>Fecha Nacimiento: </td><td> <?php echo $cliente->getFecha(); ?></td>	</tr>
+            <tr><td>Fecha Nacimiento: </td><td> <?php echo date("d-m-Y",strtotime($cliente->getFecha())); ?></td>	</tr>
 		<?php
 			}
 		?>

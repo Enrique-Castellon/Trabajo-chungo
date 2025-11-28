@@ -7,6 +7,7 @@
 	</head>
 	<body>
 			<a href="../controller/list_cuentas_ctl.php">Ver todas las cuentas</a><br>
-			<a href="../controller/create_cuenta_ctl.php">Alta cuenta</a>
+			<a href="../controller/create_cuenta_ctl.php">Alta cuenta</a><br>
+			<a href="../index.php">Volver a Inicio</a>
 	</body>
 </html>
